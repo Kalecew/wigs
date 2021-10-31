@@ -1,0 +1,63 @@
+.container{
+	width: 1440px;
+	margin: 0 auto;
+}
+
+/*Sidebar*/
+
+.sidebar{
+	width: 252px;
+	background-color: #ccc;
+	padding: 51px 15px 59px 56px;
+	display: flex;
+    flex-direction: column;
+}
+img.sidebar-logo{
+	margin-bottom: 57px;
+}
+h2.nav-title{
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 44px;
+}
+ul.nav-list{
+	font-size: 15.71px;
+}
+ul.nav-list li{
+	margin-bottom: 27px;
+}
+ul.nav-list li a{
+	display: flex;
+    align-items: center;
+    transition: color 0.2s ease-in;
+}
+ul.nav-list li a:hover{
+	color:  #FD2E24;
+}
+ul.nav-list li a::before{
+	content: "";
+	width: 27px;
+	height: 27px;
+	margin-right: 9px;
+}
+ul.nav-list li.new_in a::before{ 			background: url("../img/sidebar_icons/flash.png") 	left center no-repeat; }
+ul.nav-list li.clothing a::before{ 			background: url("../img/sidebar_icons/clothes.png") left center no-repeat; }
+ul.nav-list li.shoes a::before{ 			background: url("../img/sidebar_icons/shoes.png") 	left center no-repeat; }
+ul.nav-list li.accessories a::before{ 		background: url("../img/sidebar_icons/bag.png") 	left center no-repeat; }
+ul.nav-list li.activewear a::before{ 		background: url("../img/sidebar_icons/acrobat.png") left center no-repeat; }
+ul.nav-list li.gifts_living a::before{ 		background: url("../img/sidebar_icons/gift.png") 	left center no-repeat; }
+ul.nav-list li.inspiration a::before{ 		background: url("../img/sidebar_icons/diamond.png") left center no-repeat; }
+a.sidebar-help{
+	font-size: 15.71px;
+	margin-top: auto;
+}
+a.sidebar-help::before{
+	content: "";
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 33px;
+	margin-left: 13px;
+	background: url("../img/other_icons/help.svg") no-repeat;
+	margin-top: auto;
+}
