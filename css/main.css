@@ -1,16 +1,21 @@
 .container{
 	width: 1440px;
 	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 252px 1099px;
+	grid-template-rows: 143px 1fr;
+	column-gap: 37px;
 }
+
 
 /*Sidebar*/
 
 .sidebar{
-	width: 252px;
-	background-color: #ccc;
+	min-height: 800px;
 	padding: 51px 15px 59px 56px;
 	display: flex;
     flex-direction: column;
+    grid-row: span 2;
 }
 img.sidebar-logo{
 	margin-bottom: 57px;
@@ -60,4 +65,88 @@ a.sidebar-help::before{
 	margin-left: 13px;
 	background: url("../img/other_icons/help.svg") no-repeat;
 	margin-top: auto;
+}
+
+
+/*header*/
+header{
+	display: flex;
+	padding-top: 46px;
+}
+
+
+
+/*header-search*/
+
+.header-search{
+	display: flex;
+	width: 400px;
+	margin-right: auto;
+}
+.header-search .search-icon{
+	font-size: 0;
+	background: url("../img/other_icons/search.svg") center no-repeat;
+	background-size: auto 18px;
+	width: 24px;
+	height: 24px;
+}
+.header-search input{
+	line-height: 22px;
+	height: 22px;
+	font-size: 17px;
+	flex-grow: 1;
+	padding: 1px 17px;
+	font-family: 'Circular Std', 'Trebuchet MS', sans-serif;
+}
+.header-search input::-webkit-input-placeholder{
+	color: rgba(0, 0, 0, 0.2);
+}
+.header-search input::-moz-placeholder{
+	color: rgba(0, 0, 0, 0.2);
+}
+.header-search input::-ms-input-placeholder{
+	color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*header-nav*/
+.header-nav ul{
+	width: 434px;
+	height: 31px;
+	display: flex;
+	justify-content: space-between;
+}
+.header-nav ul li a{
+	font-size: 17px;
+	line-height: 22px;
+	padding: 0 2px;
+	font-family: 'Circular Std', 'Trebuchet MS', sans-serif;
+}
+.header-nav ul li.active{
+	border-bottom: 2px solid black;
+}
+
+
+/*header-user-button*/
+
+.header-user-button{
+	width: 73px;
+	margin-left: 47px;
+	display: flex;
+	justify-content: space-between;
+}
+.header-user-button .cart-icon{
+	background: url("../img/other_icons/basket.svg") center no-repeat;
+	background-size: auto 20px;
+	font-size: 0;
+	width: 24px;
+	height: 24px;
+}
+.header-user-button .user-icon{
+	background: url("../img/other_icons/person.svg") center no-repeat;
+	background-size: auto 20px;
+	font-size: 0;
+	width: 24px;
+	height: 24px;
 }
