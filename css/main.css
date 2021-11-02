@@ -119,12 +119,23 @@ header{
 }
 .header-nav ul li a{
 	font-size: 17px;
-	line-height: 22px;
+	height: 100%;
 	padding: 0 2px;
 	font-family: 'Circular Std', 'Trebuchet MS', sans-serif;
 }
-.header-nav ul li.active{
-	border-bottom: 2px solid black;
+.header-nav ul li::after{
+	content: "";
+	height: 2px;
+	background-color: black;
+	display: block;
+	width: 0;
+	transition: width 0.2s ease-in;
+}
+.header-nav ul li:hover::after{
+	width: 100%;
+}
+.header-nav ul li.active::after{
+	width: 100%;
 }
 
 
