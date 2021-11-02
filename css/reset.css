@@ -37,11 +37,11 @@ ul {
   list-style: none;
 }
 
-img, svg {
+/*img, svg {
   display: block;
   max-width: 100%;
   height: auto;
-}
+}*/
 
 /* Form */
 input, textarea, button, select {

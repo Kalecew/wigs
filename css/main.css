@@ -12,7 +12,7 @@
 
 .sidebar{
 	min-height: 800px;
-	padding: 51px 15px 59px 56px;
+	padding: 51px 15px 68px 56px;
 	display: flex;
     flex-direction: column;
     grid-row: span 2;
@@ -160,4 +160,109 @@ header{
 	font-size: 0;
 	width: 24px;
 	height: 24px;
+}
+
+
+
+/*cards-wrapper*/
+
+
+.cards-wrapper{
+	display: grid;
+	grid-template-rows: 180px 180px 180px 180px;
+	grid-template-columns: 259px 259px 259px 259px;
+	gap: 21px;
+	margin-bottom: 64px;
+}
+.card{
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 0 #4a8081;
+	transition: all 0.2s ease-in;
+}
+.card:hover{
+	transform: translateY(-5px);
+	box-shadow: 0 5px 5px #4a8081;
+}
+.card-horizontal{
+	grid-column: span 2;
+}
+.card-vertical{
+	grid-row: span 2;
+}
+/*.card img{
+	height: 100%;
+	width: 100%;
+}*/
+.banner1{
+	position: relative;
+}
+.banner1 p{
+	position: absolute;               
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 30px;
+}
+.section .title{
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 40px;
+	margin-bottom: 3px;
+}
+.section .description{
+	line-height: 23px;
+}
+.section-hot{
+	position: relative;
+}
+.section>div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+.section-hot .title{
+	color: #001AA2;
+}
+.section-hot .description{
+	line-height: 23px;
+}
+.section-new{
+	position: relative;
+}
+.section-new .title{
+	color: #FD2E24;
+}
+.section-new .description{
+	line-height: 23px;
+}
+.fav-btn{
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	top: 20px;
+	right: 21px;
+	background-color: #fff;
+	font-size: 0;
+	border-radius: 50%;
+}
+.fav-btn svg{
+	fill: #fff;
+	stroke: #000;
+	transition: all 0.2s ease-in;
+}
+.fav-btn:hover svg{
+	fill: #FD2E24;
+	stroke: #FD2E24;
+}
+.fav-btn.active svg{
+	fill: #FD2E24;
+	stroke: #FD2E24;
 }
