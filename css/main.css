@@ -1,8 +1,8 @@
 .container{
-	width: 1440px;
+	max-width: 1440px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 252px 1099px;
+	grid-template-columns: 252px 1fr;
 	grid-template-rows: 143px 1fr;
 	column-gap: 37px;
 }
@@ -71,6 +71,7 @@ a.sidebar-help::before{
 /*header*/
 header{
 	display: flex;
+	justify-content: flex-end;
 	padding-top: 46px;
 }
 
@@ -111,6 +112,11 @@ header{
 
 
 /*header-nav*/
+.header-nav{
+	flex-grow: 1;
+	display: flex;
+    gap: 40px;
+}
 .header-nav ul{
 	width: 434px;
 	height: 31px;
@@ -168,13 +174,17 @@ header{
 
 
 .cards-wrapper{
-	display: grid;
-	grid-template-rows: 180px 180px 180px 180px;
-	grid-template-columns: 259px 259px 259px 259px;
+	display: grid;	
+	/*grid-template-columns: 259px 259px 259px 259px;*/
+	grid-template-columns: repeat(4, minmax(180px,259px));
+	grid-auto-rows: 180px;
 	gap: 21px;
 	margin-bottom: 64px;
+	grid-auto-flow: dense;
 }
 .card{
+	display: flex;
+    justify-content: center;
 	border-radius: 15px;
 	overflow: hidden;
 	position: relative;
@@ -219,7 +229,7 @@ header{
 .section-hot{
 	position: relative;
 }
-.section>div{
+.section .text{
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -265,4 +275,38 @@ header{
 .fav-btn.active svg{
 	fill: #FD2E24;
 	stroke: #FD2E24;
+}
+
+
+
+@media (max-width: 1300px){
+	.header-nav{
+		display: none;
+	}
+}
+@media (max-width: 1100px){
+	.cards-wrapper{
+		grid-template-columns: repeat(2, minmax(180px,259px));
+	}
+}
+@media (max-width: 690px){
+	.container {
+	    /*max-width: 258px;*/
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 115px 1fr;
+	}
+	.sidebar{
+		display: none;
+	}
+}
+@media (max-width: 405px){	
+	.container {
+	    max-width: 258px;
+	}
+	.cards-wrapper{
+		grid-template-columns: 1fr;
+	}
+	.card-horizontal{
+		grid-column: span 1;
+	}
 }
