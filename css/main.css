@@ -1,5 +1,6 @@
 .container{
-	max-width: 1440px;
+	max-width: 1480px;
+	padding: 0 20px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 252px 1fr;
@@ -17,46 +18,46 @@
     flex-direction: column;
     grid-row: span 2;
 }
-img.sidebar-logo{
+.sidebar-logo{
 	margin-bottom: 57px;
 }
-h2.nav-title{
+.nav-title{
 	font-weight: bold;
 	font-size: 30px;
 	margin-bottom: 44px;
 }
-ul.nav-list{
+.nav-list{
 	font-size: 15.71px;
 }
-ul.nav-list li{
+.nav-list li{
 	margin-bottom: 27px;
 }
-ul.nav-list li a{
+.nav-list li a{
 	display: flex;
     align-items: center;
     transition: color 0.2s ease-in;
 }
-ul.nav-list li a:hover{
+.nav-list li a:hover{
 	color:  #FD2E24;
 }
-ul.nav-list li a::before{
+.nav-list li a::before{
 	content: "";
 	width: 27px;
 	height: 27px;
 	margin-right: 9px;
 }
-ul.nav-list li.new_in a::before{ 			background: url("../img/sidebar_icons/flash.png") 	left center no-repeat; }
-ul.nav-list li.clothing a::before{ 			background: url("../img/sidebar_icons/clothes.png") left center no-repeat; }
-ul.nav-list li.shoes a::before{ 			background: url("../img/sidebar_icons/shoes.png") 	left center no-repeat; }
-ul.nav-list li.accessories a::before{ 		background: url("../img/sidebar_icons/bag.png") 	left center no-repeat; }
-ul.nav-list li.activewear a::before{ 		background: url("../img/sidebar_icons/acrobat.png") left center no-repeat; }
-ul.nav-list li.gifts_living a::before{ 		background: url("../img/sidebar_icons/gift.png") 	left center no-repeat; }
-ul.nav-list li.inspiration a::before{ 		background: url("../img/sidebar_icons/diamond.png") left center no-repeat; }
-a.sidebar-help{
+.nav-list li.new_in a::before{ 			background: url("../img/sidebar_icons/flash.png") 	left center no-repeat; }
+.nav-list li.clothing a::before{ 			background: url("../img/sidebar_icons/clothes.png") left center no-repeat; }
+.nav-list li.shoes a::before{ 			background: url("../img/sidebar_icons/shoes.png") 	left center no-repeat; }
+.nav-list li.accessories a::before{ 		background: url("../img/sidebar_icons/bag.png") 	left center no-repeat; }
+.nav-list li.activewear a::before{ 		background: url("../img/sidebar_icons/acrobat.png") left center no-repeat; }
+.nav-list li.gifts_living a::before{ 		background: url("../img/sidebar_icons/gift.png") 	left center no-repeat; }
+.nav-list li.inspiration a::before{ 		background: url("../img/sidebar_icons/diamond.png") left center no-repeat; }
+.sidebar-help{
 	font-size: 15.71px;
 	margin-top: auto;
 }
-a.sidebar-help::before{
+.sidebar-help::before{
 	content: "";
 	display: inline-block;
 	width: 19px;
@@ -77,23 +78,102 @@ header{
 
 
 
+/*nav-toggle*/
+.nav-toggle{
+	width: 30px;
+	height: 20px;
+	display: flex;
+	display: none;
+}
+.nav-toggle div{
+	width: 100%;
+	height: 2px;
+	margin: auto;
+	background-color: #000;
+	position: relative;
+	font-size: 0;
+}
+.nav-toggle div:before,
+.nav-toggle div:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #000;
+	transition: transform .2s linear;
+}
+.nav-toggle div:before{top: -8px;}
+.nav-toggle div:after{bottom: -8px;}
+.nav-toggle--active{
+	position: fixed;
+	z-index: 2;
+}
+.nav-toggle--active div{
+	background-color: transparent;
+}
+.nav-toggle--active div:before{
+	top: 0;
+	transform: rotate(45deg);
+}
+.nav-toggle--active div:after{
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+.nav-toggle--active + nav{
+	display: flex;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #ed8080;	
+	margin: 0;
+	padding: 45px 30px;
+	flex-direction: column;
+	opacity: 0.9;
+	z-index: 1;
+	width: 320px;
+}
+.nav-toggle--active + nav ul{
+	flex-direction: column;
+	height: auto;
+	width: auto;
+}
+.nav-toggle--active + nav ul li{
+	padding: 4px 0;
+}
+.nav-toggle--active + nav .header-search{
+	width: auto;
+}
+.nav-toggle--active + nav .header-search input{
+	width: 170px;
+}
+.nav-toggle--active + nav .user-buttons{
+	margin: 10px 0;
+}
+
+
+
 /*header-search*/
 
 .header-search{
 	display: flex;
 	width: 400px;
 	margin-right: auto;
+	border-radius: 2px;
+    overflow: hidden;
 }
-.header-search .search-icon{
-	font-size: 0;
-	background: url("../img/other_icons/search.svg") center no-repeat;
-	background-size: auto 18px;
-	width: 24px;
-	height: 24px;
+.header-search .search-icon {
+    font-size: 0;
+    background: #fff url(../img/other_icons/search.svg) center no-repeat;
+    background-size: auto 16px;
+    width: 30px;
+    height: 24px;
 }
 .header-search input{
-	line-height: 22px;
-	height: 22px;
+	line-height: 24px;
+	height: 24px;
 	font-size: 17px;
 	flex-grow: 1;
 	padding: 1px 17px;
@@ -111,11 +191,14 @@ header{
 
 
 
+
+
+
 /*header-nav*/
 .header-nav{
 	flex-grow: 1;
 	display: flex;
-    gap: 40px;
+    gap: 47px;
 }
 .header-nav ul{
 	width: 434px;
@@ -149,7 +232,6 @@ header{
 
 .header-user-button{
 	width: 73px;
-	margin-left: 47px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -175,7 +257,6 @@ header{
 
 .cards-wrapper{
 	display: grid;	
-	/*grid-template-columns: 259px 259px 259px 259px;*/
 	grid-template-columns: repeat(4, minmax(180px,259px));
 	grid-auto-rows: 180px;
 	gap: 21px;
@@ -183,8 +264,6 @@ header{
 	grid-auto-flow: dense;
 }
 .card{
-	display: flex;
-    justify-content: center;
 	border-radius: 15px;
 	overflow: hidden;
 	position: relative;
@@ -199,6 +278,8 @@ header{
 	grid-column: span 2;
 }
 .card-vertical{
+	display: flex;
+    justify-content: center;
 	grid-row: span 2;
 }
 /*.card img{
@@ -216,6 +297,12 @@ header{
     transform: translate(-50%, -50%);
     font-weight: bold;
     font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+.section{
+	display: flex;
+    justify-content: center;
 }
 .section .title{
 	font-size: 26px;
@@ -279,34 +366,55 @@ header{
 
 
 
-@media (max-width: 1300px){
+@media (max-width: 1349px){
 	.header-nav{
 		display: none;
 	}
+	.nav-toggle{
+		display: block;
+	}
+	.section .text {
+	    width: 200px;
+	}
 }
-@media (max-width: 1100px){
+@media (max-width: 1114px){
+	.main{
+		display: flex;
+		justify-content: center;
+	}
 	.cards-wrapper{
 		grid-template-columns: repeat(2, minmax(180px,259px));
 	}
+
 }
-@media (max-width: 690px){
+@media (max-width: 729px){
 	.container {
-	    /*max-width: 258px;*/
 	    grid-template-columns: 1fr;
 	    grid-template-rows: 115px 1fr;
 	}
 	.sidebar{
 		display: none;
 	}
+	.cards-wrapper{
+		grid-template-columns: repeat(2, minmax(150px,259px));
+		grid-auto-rows: 150px;
+	}
+	.section .title {
+	    line-height: 28px;
+	}
 }
-@media (max-width: 405px){	
+@media (max-width: 409px){	
 	.container {
-	    max-width: 258px;
+	    max-width: 299px;
 	}
 	.cards-wrapper{
 		grid-template-columns: 1fr;
 	}
 	.card-horizontal{
 		grid-column: span 1;
+	}
+	.section{
+		display: flex;
+	    justify-content: flex-start;
 	}
 }

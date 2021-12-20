@@ -20,6 +20,9 @@
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js" defer></script>
+
 		<!-- Open Graph -->
 		<!-- <meta property="og:url" content="https://webcademy.ru/" /> -->
 <!-- 		<meta property="og:type" content="website" />
@@ -58,7 +61,10 @@
 				<a href="#" class="sidebar-help">Help Center</a>
 			</aside>
 
-			<header class="header">				
+			<header class="header">			
+				<button class="nav-toggle" id="nav-toggle">
+					<div>Меню</div>
+				</button>	
 				<nav class="header-nav">
 					<form class="header-search">
 						<span class="search-icon">Поиск</span>
@@ -70,11 +76,11 @@
 						<li><a href="#">manufacturing</a></li>
 						<li><a href="#">packaging</a></li>
 					</ul>
-				</nav>
-				<div class="header-user-button">
-					<a href="#" class="cart-icon">Корзина</a>
-					<a href="#" class="user-icon">Личный кабинет</a>
-				</div>
+					<div class="header-user-button">
+						<a href="#" class="cart-icon">Корзина</a>
+						<a href="#" class="user-icon">Личный кабинет</a>					
+					</div>
+				</nav>				
 			</header>
 
 			<main class="main">
