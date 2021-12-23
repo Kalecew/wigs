@@ -24,6 +24,8 @@ $(function(){
 		$('#header-nav').removeClass("header-nav--active");
 		$('#sidebar').toggleClass("sidebar--active");
 	});
+
+	//hide active navs
 	$("body").on("click", function(){
 		$('#sidebar').removeClass("sidebar--active");
 		$('#nav-toggle').removeClass("nav-toggle--active");

@@ -57,9 +57,6 @@
 	font-size: 15.71px;
 	height: 19px;
 	margin-top: auto;
-/*	overflow-x: hidden;
-	overflow-y: clip;*/
-	overflow-x: clip;
 }
 .sidebar-help::before{
 	content: "";
@@ -70,13 +67,6 @@
 	margin-left: 13px;
 	background: url("../img/other_icons/help.svg") no-repeat;
 	margin-top: auto;
-
-}
-
-
-
-@media (max-width: 1199px){
-	
 }
 @media (max-width: 767px){
 	.sidebar{
@@ -98,16 +88,4 @@
 	.sidebar-logo{
 		display: none;
 	}
-/*	.sidebar-wrap{
-		
-	}
-	
-	.sidebar{
-		width: 252px;
-		overflow-y: scroll;
-		position: fixed;
-	}
-	.nav-title{
-		display: block;
-	}*/
 }
