@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/sidebar.css" />
+		<link rel="stylesheet" href="./css/header.css" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script type="text/javascript" src="js/script.js" defer></script>
@@ -42,10 +44,10 @@
 		<meta name="theme-color" content="#ffffff"> -->
 	</head>
 	<body>
-		<div class="container">
-			
-			<div class="sidebar-wrap" id="sidebar-wrap">
-				<aside class="sidebar">
+		<div class="container flex-container">
+
+			<aside class="sidebar" id="sidebar">
+				<div class="sidebar-content">
 					<img class="sidebar-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
 					<div class="sidebar-nav">
 						<h2 class="nav-title">Explore</h2>
@@ -60,99 +62,101 @@
 						</ul>
 					</div>
 					<a href="#" class="sidebar-help" title="Help Center">Help Center</a>
-				</aside>
+				</div>
+			</aside>
+			
+			<div class="right-side">
+				<header class="header">		
+					<button class="sidebar-toggle" id="sidebar-toggle">
+						<div>Боковое меню</div>
+					</button>	
+					<img class="header-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
+					<div class="nav-toggle-wrap">
+						<button class="nav-toggle" id="nav-toggle">
+							<div>Меню</div>
+						</button>	
+					</div>					
+					<nav class="header-nav" id="header-nav">
+						<form class="header-search">
+							<span class="search-icon">Поиск</span>
+							<input type="text" placeholder="Search store">
+						</form>
+						<ul>
+							<li class="active"><a href="#">products</a></li>
+							<li><a href="#">story</a></li>
+							<li><a href="#">manufacturing</a></li>
+							<li><a href="#">packaging</a></li>
+						</ul>
+						<div class="header-user-button">
+							<a href="#" class="cart-icon">Корзина</a>
+							<a href="#" class="user-icon">Личный кабинет</a>					
+						</div>
+					</nav>				
+				</header>
+
+				<main class="main">
+					<div class="cards-wrapper">
+						<div class="card card-horizontal banner1">
+							<img src="./files/banner1.svg" width="539" height="180" alt="GET UP TO 50% OFF">
+							<p>GET UP TO 50% OFF</p>
+						</div>
+						<div class="card card-vertical product1">
+							<a href="#"><img src="./files/product1.jpg" width="259" height="381" alt="pink sweater"></a>
+							<button type="button" class="fav-btn active">
+								<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="card card-vertical product2">
+							<a href="#"><img src="./files/product2.jpg" width="259" height="381" alt="gold undershirt"></a>
+							<button type="button" class="fav-btn">
+								<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="card card-horizontal banner2">
+							<img src="./files/banner2.svg" width="539" height="180" alt="Hello summer, up to 50% off">
+						</div>					
+						<div class="card card-vertical product3">
+							<a href="#"><img src="./files/product3.jpg" width="259" height="381" alt="pearl robe"></a>
+							<button type="button" class="fav-btn">
+								<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="card card-vertical product4">
+							<a href="#"><img src="./files/product4.jpg" width="259" height="381" alt="White T-shirt"></a>
+							<button type="button" class="fav-btn">
+								<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="card card-horizontal section section-hot">
+							<a href="#">
+								<img src="./files/section1.jpg" width="539" height="180" alt="Trending & Hot">
+								<div class="text">
+									<p class="title">Trending & Hot</p>
+									<p class="description">A collection of most trending items.</p>
+								</div>
+							</a>
+						</div>	
+						<div class="card card-horizontal section section-new">
+							<a href="#">
+								<img src="./files/section2.jpg" width="539" height="180" alt="Buy it for the first time">
+								<div class="text">
+									<p class="title">Buy it for the first time</p>
+									<p class="description">New in store. Try it before anyone else.</p>
+								</div>
+							</a>	
+						</div>										
+					</div>
+				</main>
 			</div>
 			
-
-			<header class="header">		
-				<button class="sidebar-toggle" id="sidebar-toggle">
-					<div>Боковое меню</div>
-				</button>	
-				<img class="header-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
-				<div class="nav-toggle-wrap">
-					<button class="nav-toggle" id="nav-toggle">
-						<div>Меню</div>
-					</button>	
-				</div>					
-				<nav class="header-nav" id="header-nav">
-					<form class="header-search">
-						<span class="search-icon">Поиск</span>
-						<input type="text" placeholder="Search store">
-					</form>
-					<ul>
-						<li class="active"><a href="#">products</a></li>
-						<li><a href="#">story</a></li>
-						<li><a href="#">manufacturing</a></li>
-						<li><a href="#">packaging</a></li>
-					</ul>
-					<div class="header-user-button">
-						<a href="#" class="cart-icon">Корзина</a>
-						<a href="#" class="user-icon">Личный кабинет</a>					
-					</div>
-				</nav>				
-			</header>
-
-			<main class="main">
-				<div class="cards-wrapper">
-					<div class="card card-horizontal banner1">
-						<img src="./files/banner1.svg" width="539" height="180" alt="GET UP TO 50% OFF">
-						<p>GET UP TO 50% OFF</p>
-					</div>
-					<div class="card card-vertical product1">
-						<a href="#"><img src="./files/product1.jpg" width="259" height="381" alt="pink sweater"></a>
-						<button type="button" class="fav-btn active">
-							<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
-							</svg>
-						</button>
-					</div>
-					<div class="card card-vertical product2">
-						<a href="#"><img src="./files/product2.jpg" width="259" height="381" alt="gold undershirt"></a>
-						<button type="button" class="fav-btn">
-							<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
-							</svg>
-						</button>
-					</div>
-					<div class="card card-horizontal banner2">
-						<img src="./files/banner2.svg" width="539" height="180" alt="Hello summer, up to 50% off">
-					</div>					
-					<div class="card card-vertical product3">
-						<a href="#"><img src="./files/product3.jpg" width="259" height="381" alt="pearl robe"></a>
-						<button type="button" class="fav-btn">
-							<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
-							</svg>
-						</button>
-					</div>
-					<div class="card card-vertical product4">
-						<a href="#"><img src="./files/product4.jpg" width="259" height="381" alt="White T-shirt"></a>
-						<button type="button" class="fav-btn">
-							<svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.85293 2.23724L8.42982 1.64278C9.74085 0.290052 11.8286 0.101218 13.2087 1.27725C14.8241 2.65629 14.9108 5.13808 13.4608 6.63447L7.79659 12.4831C7.62714 12.658 7.35815 12.658 7.18871 12.4831L1.52481 6.63479C0.0772595 5.1383 0.16417 2.65606 1.77982 1.27701C3.16004 0.101077 5.25094 0.291026 6.55863 1.64301L7.13529 2.23724L7.49411 2.60698L7.85293 2.23724Z"/>
-							</svg>
-						</button>
-					</div>
-					<div class="card card-horizontal section section-hot">
-						<a href="#">
-							<img src="./files/section1.jpg" width="539" height="180" alt="Trending & Hot">
-							<div class="text">
-								<p class="title">Trending & Hot</p>
-								<p class="description">A collection of most trending items.</p>
-							</div>
-						</a>
-					</div>	
-					<div class="card card-horizontal section section-new">
-						<a href="#">
-							<img src="./files/section2.jpg" width="539" height="180" alt="Buy it for the first time">
-							<div class="text">
-								<p class="title">Buy it for the first time</p>
-								<p class="description">New in store. Try it before anyone else.</p>
-							</div>
-						</a>	
-					</div>										
-				</div>
-			</main>
 
 		</div>
 	</body>

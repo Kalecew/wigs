@@ -1,277 +1,9 @@
-.container{
-	max-width: 1480px;
-	padding: 0 20px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 252px 1fr;
-	grid-template-rows: 143px 1fr;
-	column-gap: 37px;
-}
-
-
-/*Sidebar*/
-
-.sidebar-wrap{
-	min-height: 800px;
-	grid-row: span 2;
-	position: relative;
-}
-.sidebar{
-	position: absolute;
-	padding: 45px 15px 68px 56px;
-	display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.sidebar-logo{
-	position: absolute;
-}
-.sidebar-nav{
-	margin-top: 100px;
-}
-.nav-title{
-	font-weight: bold;
-	font-size: 30px;
-	margin-bottom: 44px;
-	overflow: hidden;
-}
-.nav-list{
-	font-size: 15.71px;
-}
-.nav-list li{
-	margin-bottom: 27px;
-	overflow: hidden;
-}
-.nav-list li a{
-	display: flex;
-    align-items: center;
-    transition: color 0.2s ease-in;
-    padding-left: 40px;
-    position: relative;
-    word-wrap: normal;
-    height: 20px;
-}
-.nav-list li a:hover{
-	color:  #FD2E24;
-}
-.nav-list li a::before{
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 27px;
-	height: 27px;
-}
-.nav-list li.new_in a::before{ 			background: url("../img/sidebar_icons/flash.png") 	left center no-repeat; }
-.nav-list li.clothing a::before{ 			background: url("../img/sidebar_icons/clothes.png") left center no-repeat; }
-.nav-list li.shoes a::before{ 			background: url("../img/sidebar_icons/shoes.png") 	left center no-repeat; }
-.nav-list li.accessories a::before{ 		background: url("../img/sidebar_icons/bag.png") 	left center no-repeat; }
-.nav-list li.activewear a::before{ 		background: url("../img/sidebar_icons/acrobat.png") left center no-repeat; }
-.nav-list li.gifts_living a::before{ 		background: url("../img/sidebar_icons/gift.png") 	left center no-repeat; }
-.nav-list li.inspiration a::before{ 		background: url("../img/sidebar_icons/diamond.png") left center no-repeat; }
-.sidebar-help{
-	font-size: 15.71px;
-	height: 19px;
-	margin-top: auto;
-/*	overflow-x: hidden;
-	overflow-y: clip;*/
-	overflow-x: clip;
-}
-.sidebar-help::before{
-	content: "";
-	display: inline-block;
-	width: 19px;
-	height: 19px;
-	margin-right: 33px;
-	margin-left: 13px;
-	background: url("../img/other_icons/help.svg") no-repeat;
-	margin-top: auto;
-
-}
-
-
-/*header*/
-header{
-	display: flex;
-	justify-content: flex-end;
-	padding-top: 46px;
-}
-.header-logo{
-	display: none;
-	transform: translateY(-10px);
-}
-
-
-/*sidebar-toggle*/
-.sidebar-toggle{
-	width: 30px;
-	height: 20px;
-	display: flex;
-	display: none;
-}
-.sidebar-toggle div{
-	width: 4px;
-	height: 4px;
-	margin: auto;
-	background-color: #000;
-	position: relative;
-	font-size: 0;
-	border-radius: 50px;
-}
-.sidebar-toggle div:before,
-.sidebar-toggle div:after{
-	content: "";
-	display: block;
-	position: absolute;
-	width: 4px;
-	height: 4px;
-	border-radius: 50px;
-	background-color: #000;
-	transition: transform .2s linear;
-}
-.sidebar-toggle div:before{top: -8px;}
-.sidebar-toggle div:after{bottom: -8px;}
-
-
-/*nav-toggle*/
-.nav-toggle-wrap{
-	width: 30px;
-	height: 20px;
-}
-.nav-toggle{
-	width: 30px;
-	height: 20px;
-	display: flex;
-	display: none;
-}
-.nav-toggle div{
-	width: 100%;
-	height: 2px;
-	margin: auto;
-	background-color: #000;
-	position: relative;
-	font-size: 0;
-}
-.nav-toggle div:before,
-.nav-toggle div:after{
-	content: "";
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 2px;
-	background-color: #000;
-	transition: transform .2s linear;
-}
-.nav-toggle div:before{top: -8px;}
-.nav-toggle div:after{bottom: -8px;}
-.nav-toggle--active div{
-	background-color: transparent;
-}
-.nav-toggle--active div:before{
-	top: 0;
-	transform: rotate(45deg);
-}
-.nav-toggle--active div:after{
-	bottom: 0;
-	transform: rotate(-45deg);
-}
-
-
-
-
-/*header-search*/
-
-.header-search{
-	display: flex;
-	width: 400px;
-	margin-right: auto;
-	border-radius: 2px;
-    overflow: hidden;
-}
-.header-search .search-icon {
-    font-size: 0;
-    background: #fff url(../img/other_icons/search.svg) center no-repeat;
-    background-size: auto 16px;
-    width: 30px;
-    height: 24px;
-}
-.header-search input{
-	line-height: 24px;
-	height: 24px;
-	font-size: 17px;
-	flex-grow: 1;
-	padding: 1px 17px;
-	font-family: 'Circular Std', 'Trebuchet MS', sans-serif;
-}
-.header-search input::-webkit-input-placeholder{
-	color: rgba(0, 0, 0, 0.2);
-}
-.header-search input::-moz-placeholder{
-	color: rgba(0, 0, 0, 0.2);
-}
-.header-search input::-ms-input-placeholder{
-	color: rgba(0, 0, 0, 0.2);
-}
 
 
 
 
 
 
-/*header-nav*/
-.header-nav{
-	flex-grow: 1;
-	display: flex;
-    gap: 47px;
-}
-.header-nav ul{
-	width: 434px;
-	height: 31px;
-	display: flex;
-	justify-content: space-between;
-}
-.header-nav ul li a{
-	font-size: 17px;
-	height: 100%;
-	padding: 0 2px;
-	font-family: 'Circular Std', 'Trebuchet MS', sans-serif;
-}
-.header-nav ul li::after{
-	content: "";
-	height: 2px;
-	background-color: black;
-	display: block;
-	width: 0;
-	transition: width 0.2s ease-in;
-}
-.header-nav ul li:hover::after{
-	width: 100%;
-}
-.header-nav ul li.active::after{
-	width: 100%;
-}
-
-/*header-user-button*/
-
-.header-user-button{
-	width: 73px;
-	display: flex;
-	justify-content: space-between;
-}
-.header-user-button .cart-icon{
-	background: url("../img/other_icons/basket.svg") center no-repeat;
-	background-size: auto 20px;
-	font-size: 0;
-	width: 24px;
-	height: 24px;
-}
-.header-user-button .user-icon{
-	background: url("../img/other_icons/person.svg") center no-repeat;
-	background-size: auto 20px;
-	font-size: 0;
-	width: 24px;
-	height: 24px;
-}
 
 
 
@@ -389,135 +121,32 @@ header{
 
 
 
-@media (max-width: 1349px){
-	.container{
-		grid-template-columns: 100px 1fr;
-	}
-	.sidebar{
-		width: 100px;
-		transition: width .2s ease-out;
-		white-space:  nowrap;
-		z-index: 1;
-		background-color: #fafafa;
-	}
-	.sidebar:hover{
-		width: 252px;	    	    
-	}
-	.nav-title{
-		display: none;
-	}
-	.sidebar:hover .nav-title{
-		display: block;
-	}
-	.sidebar-help::before{
-		margin-left: 0
-	}
-	.header-nav{
-		display: none;
-	}
-	.nav-toggle{
-		display: block;
-	}
-	.nav-toggle--active{
-		position: fixed;
-		z-index: 2;
-		right: 20px;
-	}
-	.header-nav--active{
-		display: flex;
-		position: fixed;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		background-color: #ed8080;	
-		margin: 0;
-		padding: 45px 30px;
-		flex-direction: column;
-		opacity: 0.9;
-		z-index: 1;
-		width: 320px;
-		gap: 20px;
-	}
-	.header-nav--active ul{
-		flex-direction: column;
-		height: auto;
-		width: auto;
-	}
-	.header-nav--active ul li{
-		padding: 4px 0;
-	}
-	.header-nav--active .header-search{
-		width: auto;
-	}
-	.header-nav--active .header-search input{
-		width: 170px;
-	}
-	.header-nav--active .user-buttons{
-		margin: 10px 0;
-	}
+@media (max-width: 1399px){
 	.section .text {
 	    width: 200px;
 	}
 }
-@media (max-width: 1114px){
+@media (max-width: 1199px){
 	.main{
 		display: flex;
 		justify-content: center;
 	}
-}
-@media (max-width: 975px){
 	.cards-wrapper{
 		grid-template-columns: repeat(2, minmax(180px,259px));
 	}
 }
-@media (max-width: 729px){
-	.container {
-	    grid-template-columns: 1fr;
-	    grid-template-rows: 115px 1fr;
-	}
-	.sidebar-wrap{
-		position: fixed;
-		left: -252px;
-		transition: left .2s ease-out;
-	}
-	.sidebar-wrap--active{
-		left: 0;
-		z-index: 1;
-	}
-	.sidebar{
-		width: 252px;
-		overflow-y: scroll;
-		position: fixed;
-	}
-	.nav-title{
-		display: block;
-	}
-	header {
-	    justify-content: space-between;
-	}
-	.sidebar-toggle{
-		display: block;
-	}
-	.header-logo{
-		display: block;
-	}
-	.section .title {
+@media (max-width: 767px){
+/*	.section .title {
 	    line-height: 28px;
-	}
+	}*/
 }
-@media (max-width: 469px){
-	.cards-wrapper{
+@media (max-width: 480px){
+/*	.cards-wrapper{
 		grid-template-columns: repeat(2, minmax(150px,259px));
 		grid-auto-rows: 150px;
-	}
-}
-@media (max-width: 379px){	
-	.main {
-	    max-width: 259px;
-	    margin: 0 auto;
-	}
+	}*/
 	.cards-wrapper{
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 259px);
 	}
 	.card-horizontal{
 		grid-column: span 1;
@@ -526,4 +155,12 @@ header{
 		display: flex;
 	    justify-content: flex-start;
 	}
+}
+@media (max-width: 320px){	
+/*	.main {
+	    max-width: 259px;
+	    margin: 0 auto;
+	}
+	
+	*/
 }

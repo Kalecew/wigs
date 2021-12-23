@@ -10,19 +10,24 @@ $(function(){
 	});
 
 	// nav-toggle active
-	$("#nav-toggle").on("click", function(){
+	$("#nav-toggle").on("click", function(e){
+		e.stopPropagation();
 		$(this).toggleClass("nav-toggle--active");
 		$('#header-nav').toggleClass("header-nav--active");
+		$('#sidebar').removeClass("sidebar--active");
 	});
 
 	// sidebar-toggle active
 	$("#sidebar-toggle").on("click", function(e){
 		e.stopPropagation();
 		$('#nav-toggle').removeClass("nav-toggle--active");
-		$('#sidebar-wrap').toggleClass("sidebar-wrap--active");
+		$('#header-nav').removeClass("header-nav--active");
+		$('#sidebar').toggleClass("sidebar--active");
 	});
 	$("body").on("click", function(){
-		$('#sidebar-wrap').removeClass("sidebar-wrap--active");
+		$('#sidebar').removeClass("sidebar--active");
+		$('#nav-toggle').removeClass("nav-toggle--active");
+		$('#header-nav').removeClass("header-nav--active");
 	});
 
 }); 
