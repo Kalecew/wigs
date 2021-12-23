@@ -30,4 +30,9 @@ $(function(){
 		$('#header-nav').removeClass("header-nav--active");
 	});
 
+	//check favorite
+	$("[data-favorite]").on("click", function(){
+		$(this).toggleClass("fav-btn--active");
+	})
+
 }); 

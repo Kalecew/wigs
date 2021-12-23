@@ -114,7 +114,7 @@
 	fill: #FD2E24;
 	stroke: #FD2E24;
 }
-.fav-btn.active svg{
+.fav-btn--active svg{
 	fill: #FD2E24;
 	stroke: #FD2E24;
 }
