@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<!-- encoding -->
 		<meta charset="UTF-8" />
@@ -44,28 +44,37 @@
 	<body>
 		<div class="container">
 			
-			<aside class="sidebar">
-				<img class="sidebar-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
-				<div class="sidebar-nav">
-					<h2 class="nav-title">Explore</h2>
-					<ul class="nav-list">
-						<li class="new_in"><a href="#">New In</a></li>
-						<li class="clothing"><a href="#">Clothing</a></li>
-						<li class="shoes"><a href="#">Shoes</a></li>
-						<li class="accessories"><a href="#">Accessories</a></li>
-						<li class="activewear"><a href="#">Activewear</a></li>
-						<li class="gifts_living"><a href="#">Gifts & Living</a></li>
-						<li class="inspiration"><a href="#">Inspiration</a></li>
-					</ul>
-				</div>
-				<a href="#" class="sidebar-help">Help Center</a>
-			</aside>
+			<div class="sidebar-wrap" id="sidebar-wrap">
+				<aside class="sidebar">
+					<img class="sidebar-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
+					<div class="sidebar-nav">
+						<h2 class="nav-title">Explore</h2>
+						<ul class="nav-list">
+							<li class="new_in"><a href="#" title="New In">New In</a></li>
+							<li class="clothing"><a href="#" title="Clothing">Clothing</a></li>
+							<li class="shoes"><a href="#" title="Shoes">Shoes</a></li>
+							<li class="accessories"><a href="#" title="Accessories">Accessories</a></li>
+							<li class="activewear"><a href="#" title="Activewear">Activewear</a></li>
+							<li class="gifts_living"><a href="#" title="Gifts & Living">Gifts & Living</a></li>
+							<li class="inspiration"><a href="#" title="Inspiration">Inspiration</a></li>
+						</ul>
+					</div>
+					<a href="#" class="sidebar-help" title="Help Center">Help Center</a>
+				</aside>
+			</div>
+			
 
-			<header class="header">			
-				<button class="nav-toggle" id="nav-toggle">
-					<div>Меню</div>
+			<header class="header">		
+				<button class="sidebar-toggle" id="sidebar-toggle">
+					<div>Боковое меню</div>
 				</button>	
-				<nav class="header-nav">
+				<img class="header-logo" src="./img/logo.svg" alt="Caped" width="93" height="44">
+				<div class="nav-toggle-wrap">
+					<button class="nav-toggle" id="nav-toggle">
+						<div>Меню</div>
+					</button>	
+				</div>					
+				<nav class="header-nav" id="header-nav">
 					<form class="header-search">
 						<span class="search-icon">Поиск</span>
 						<input type="text" placeholder="Search store">
