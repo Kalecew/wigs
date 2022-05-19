@@ -89,9 +89,9 @@
 .header-search{
 	display: flex;
 	flex: 0 1 400px;
-	margin-right: auto;
 	border-radius: 2px;
     overflow: hidden;
+    margin: 0 47px 0 0;
 }
 .header-search .search-icon {
     font-size: 0;
@@ -127,13 +127,13 @@
 .header-nav{
 	flex-grow: 1;
 	display: flex;
-    gap: 47px;
 }
 .header-nav ul{
 	width: 434px;
 	height: 31px;
 	display: flex;
 	justify-content: space-between;
+	margin-left: auto;
 }
 .header-nav ul li a{
 	font-size: 17px;
@@ -161,6 +161,7 @@
 	width: 73px;
 	display: flex;
 	justify-content: space-between;
+    margin: 0 0 0 47px;
 }
 .header-user-button .cart-icon{
 	background: url("../img/other_icons/basket.svg") center no-repeat;
@@ -208,24 +209,25 @@
 		opacity: 0.9;
 		z-index: 1;
 		width: 320px;
-		gap: 20px;
 	}
 	.header-nav--active ul{
 		flex-direction: column;
 		height: auto;
 		width: auto;
+		margin: 0;
 	}
 	.header-nav--active ul li{
 		padding: 4px 0;
 	}
 	.header-nav--active .header-search{
 		width: auto;
+		margin: 0 60px 20px 0;
 	}
 	.header-nav--active .header-search input{
 		width: 170px;
 	}
-	.header-nav--active .user-buttons{
-		margin: 10px 0;
+	.header-nav--active .header-user-button{
+		margin: 20px 0 0 0;
 	}
 }
 @media (max-width: 767px){
